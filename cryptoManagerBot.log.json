@@ -1,0 +1,3245 @@
+{
+  "timeMillis" : 1514469993989,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994060,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994062,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994064,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994072,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994482,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994484,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994485,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: {}",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994603,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994603,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994604,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994604,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994605,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994606,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994606,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994634,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994657,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994659,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 0",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994660,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 0",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994669,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994670,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994672,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994673,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994674,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994675,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994676,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994714,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994716,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994716,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 0",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994722,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 0",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994723,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 2 => Anton van der Kolk",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994724,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 3 => null",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994726,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "FATAL",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Error executing query: 'INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);'",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514469994727,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "FATAL",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Used parameters: '0'",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362153,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362223,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362224,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362225,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362233,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362567,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362568,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362569,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: {}",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362582,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362582,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362582,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362583,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362583,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362584,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362585,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362600,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362603,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362604,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362605,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362608,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470362609,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411025,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411098,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411100,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411101,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411109,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411470,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411471,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411472,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: {}",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411484,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411485,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411485,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411486,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411486,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411487,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411488,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411505,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411508,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411509,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411510,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411512,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411512,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411514,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411514,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411515,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411516,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411516,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411555,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411558,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411558,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411559,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411559,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 2 => Anton van der Kolk",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411560,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 3 => null",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411561,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "FATAL",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Error executing query: 'INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);'",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470411562,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "FATAL",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Used parameters: '204878733'",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749545,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749602,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749603,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749604,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749610,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749970,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749972,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749973,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: {}",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749987,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749987,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749988,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749989,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749990,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749993,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470749994,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750009,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750019,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750020,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750021,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750023,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750023,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750026,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750027,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750030,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750034,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750035,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750049,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750050,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750051,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750051,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750052,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 2 => Anton van der Kolk",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750053,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 3 => null",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750054,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "FATAL",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Error executing query: 'INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);'",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470750055,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "FATAL",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Used parameters: '204878733'",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470937699,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470937749,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470937750,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470937751,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470937757,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938044,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938046,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938047,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: {}",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938064,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938065,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938066,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938066,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938067,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938068,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938069,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938087,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938091,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938092,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938093,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938095,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938095,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938097,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938098,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938098,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938100,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938101,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938118,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938119,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938121,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938122,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938123,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 2 => Anton van der Kolk",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938123,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 3 => ",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938128,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514470938128,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 12,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471509718,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.bots.CryptoManagerBot",
+  "message" : "Received the command /start from chat '204878733' send by 'kolkos'",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471509784,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471509785,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471509786,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471509791,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471509796,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510096,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510097,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510098,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: {}",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510111,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510111,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510112,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510112,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing connection",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510114,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510115,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510115,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510120,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510121,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510122,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510134,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510135,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510135,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510135,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510137,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510137,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510138,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510138,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing resultSet",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510138,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing connection",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510139,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510139,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510140,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510140,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510141,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510142,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510154,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510155,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: UPDATE chat SET name = ?, api_key = ? WHERE telegram_chat_id = ?",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510155,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: Anton van der Kolk",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510156,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => Anton van der Kolk",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510157,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 2 => ",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510157,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 3 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510166,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (UPDATE chat SET name = ?, api_key = ? WHERE telegram_chat_id = ?)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510167,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510167,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510172,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing connection",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514471510173,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473227964,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228135,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228137,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228138,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228153,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228802,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228803,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228803,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228821,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228823,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228824,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228824,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228825,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing resultSet",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228826,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing connection",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473228828,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473234020,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.bots.CryptoManagerBot",
+  "message" : "Reply on /register received",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473425959,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426053,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426054,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426055,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426061,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426460,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426461,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426462,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426474,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => 204878733",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426476,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426477,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426478,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426478,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing resultSet",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426479,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing connection",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473426481,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473430105,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.bots.CryptoManagerBot",
+  "message" : "Reply on /register received in chat 204878733 from kolkos",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449286,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.bots.CryptoManagerBot",
+  "message" : "Received the command /start from chat '-236099150' send by 'kolkos'",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449288,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449289,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449290,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449292,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449293,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449310,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449311,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449312,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: {}",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449314,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (CREATE TABLE IF NOT EXISTS chat (telegram_chat_id bigint(11) NOT NULL,name varchar(255),api_key varchar(255),PRIMARY KEY (telegram_chat_id));)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449315,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449315,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449316,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing connection",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449318,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449319,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449320,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449325,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449326,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449327,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449356,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449356,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449357,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: -236099150",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449357,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => -236099150",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449362,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449364,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449366,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449367,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing resultSet",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449368,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing connection",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449369,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449370,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449370,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449371,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449372,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449373,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449392,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449393,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449393,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: -236099150",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449394,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => -236099150",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449395,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 2 => Anton van der Kolk",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449396,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 3 => ",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449400,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449401,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeUpdateQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449402,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449403,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing connection",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473449411,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454318,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454321,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454322,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Load database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454323,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished loading database configuration",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454324,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "mysql url: jdbc:mysql://localhost:3306/cryptoManagerBot?user=cryptoManagerBot&password=cryptoManagerBot",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454333,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished connectDatabase()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454333,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Executing prepared statement: SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454334,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Prepared parameters: -236099150",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454334,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Setting parameter 1 => -236099150",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454336,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Query OK: (SELECT COUNT(telegram_chat_id) AS numberFound FROM chat WHERE telegram_chat_id = ?;)",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454337,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Finished executeSelectQuery()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454337,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454338,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing resultSet",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454339,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Closing connection",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473454339,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "TRACE",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.controllers.MySQLController",
+  "message" : "Entering close()",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}
+{
+  "timeMillis" : 1514473456529,
+  "thread" : "kolkos_ProbeerselBot Telegram Executor",
+  "level" : "INFO",
+  "loggerName" : "nl.kolkos.cryptoManagerBot.bots.CryptoManagerBot",
+  "message" : "Reply on /register received in chat -236099150 from null",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 13,
+  "threadPriority" : 1
+}

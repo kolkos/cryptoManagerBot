@@ -19,7 +19,7 @@ public class Application {
         TelegramBotsApi botsApi = new TelegramBotsApi();
 
         try {
-        	// load the config
+       		// load the config
 	    		ConfigService configService = new ConfigService();
 	    		Properties properties = configService.loadConfig();
 	    		

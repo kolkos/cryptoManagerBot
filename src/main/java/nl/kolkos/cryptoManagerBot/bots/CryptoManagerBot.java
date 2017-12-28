@@ -103,10 +103,33 @@ public class CryptoManagerBot extends AbilityBot {
 						
 					}
 				)
-				.reply(upd -> {
-					LOG.info("Reply on /register received in chat {} from {}", upd.getMessage().getChatId(), upd.getMessage().getChat().getUserName());
-					// Sends message
-					silent.send("It's been nice playing with you!", upd.getMessage().getChatId());
+				.reply(upd -> 
+					{
+						LOG.info("Reply on /register received in chat {} from {}", upd.getMessage().getChatId(), upd.getMessage().getChat().getUserName());
+						
+						// create the chat object
+						try {
+							Chat chat = chatService.findChatByTelegramChatId(upd.getMessage().getChatId());
+							
+							// add the api key to the chat object
+							String apiKey = upd.getMessage().getText();
+							LOG.warn("api key received: '{}'", apiKey);
+							
+							chat.setApiKey(apiKey);
+							
+							// save the Chat object
+							chatService.saveChat(chat);
+													
+							// Sends message
+							silent.send(String.format("API Key '%s' registered", apiKey), upd.getMessage().getChatId());
+							silent.send("Send the command /status to check the status of the api key", upd.getMessage().getChatId());	
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							String errorMsg = String.format("Something went wrong registering your API: \n\n %s", e.getMessage());
+							silent.send(errorMsg, upd.getMessage().getChatId());
+							
+						}
 					},
 					MESSAGE,
 					REPLY,

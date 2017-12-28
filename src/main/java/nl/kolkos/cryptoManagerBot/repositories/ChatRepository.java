@@ -94,4 +94,28 @@ public class ChatRepository {
 		}
 		
 	}
+	
+	public Chat findChatByTelegramChatId(long telegramChatId) throws Exception {
+		// check if the chat exists
+		if(!this.checkIfChatExists(telegramChatId)) {
+			return null;
+		}
+		
+		Chat chat = new Chat();
+		
+		String query = "SELECT * FROM chat WHERE telegram_chat_id = ?;";
+		Object[] parameters = new Object[] {telegramChatId};
+		
+		MySQLController mysql = new MySQLController();
+		mysql.executeSelectQuery(query, parameters);
+		
+		ResultSet resultSet = mysql.getResultSet();
+		while(resultSet.next()) {
+			chat.setTelegramChatId(resultSet.getLong("telegram_chat_id"));
+			chat.setChatName(resultSet.getString("name"));
+			chat.setApiKey(resultSet.getString("api_key"));
+		}
+		
+		return chat;
+	}
 }

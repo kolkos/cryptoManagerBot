@@ -20,4 +20,8 @@ public class ChatService {
 		}
 		return chatExists;
 	}
+	
+	public Chat findChatByTelegramChatId(long telegramChatId) throws Exception{
+		return chatRepository.findChatByTelegramChatId(telegramChatId);
+	}
 }

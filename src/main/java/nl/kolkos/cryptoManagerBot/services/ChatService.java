@@ -21,6 +21,16 @@ public class ChatService {
 		return chatExists;
 	}
 	
+	public boolean checkIfChatHasApiKey(Chat chat) {
+		boolean botHasApi = false;
+		
+		if(chat.getApiKey().length() > 0) {
+			botHasApi = true;
+		}
+		
+		return botHasApi;
+	}
+	
 	public Chat findChatByTelegramChatId(long telegramChatId) throws Exception{
 		return chatRepository.findChatByTelegramChatId(telegramChatId);
 	}

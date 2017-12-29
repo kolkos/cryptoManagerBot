@@ -26,10 +26,6 @@ public class ChatRepository {
 	 * @throws Exception
 	 */
 	private void saveNewChat(Chat chat) throws Exception {
-		System.out.println(String.format("chat.telegramChatId: %d", chat.getTelegramChatId()));
-		System.out.println(String.format("chat.name: %s", chat.getChatName()));
-		System.out.println(String.format("chat.apiKey: %s", chat.getApiKey()));
-		
 		String query = "INSERT INTO chat (telegram_chat_id, name, api_key) VALUES (?, ?, ?);";
 		Object[] parameters = new Object[] {
 				chat.getTelegramChatId(),
@@ -115,6 +111,7 @@ public class ChatRepository {
 			chat.setChatName(resultSet.getString("name"));
 			chat.setApiKey(resultSet.getString("api_key"));
 		}
+		mysql.close();
 		
 		return chat;
 	}

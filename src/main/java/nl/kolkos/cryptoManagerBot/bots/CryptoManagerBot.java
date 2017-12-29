@@ -4,7 +4,9 @@ import com.google.common.annotations.VisibleForTesting;
 
 import nl.kolkos.cryptoManagerBot.commandHandlers.TestCommand;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
+import nl.kolkos.cryptoManagerBot.objects.Command;
 import nl.kolkos.cryptoManagerBot.services.ChatService;
+import nl.kolkos.cryptoManagerBot.services.CommandService;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -35,6 +37,7 @@ public class CryptoManagerBot extends AbilityBot {
 	private static final Logger LOG = LogManager.getLogger(CryptoManagerBot.class);
 	
 	private ChatService chatService = new ChatService();
+	private CommandService commandService = new CommandService();
 	private TestCommand testCommand = new TestCommand();
 	
 	
@@ -96,12 +99,27 @@ public class CryptoManagerBot extends AbilityBot {
 				.input(0)
 				.action(ctx -> 
 					{
-						// check if the chat is registered yet 
-						if(!chatService.checkIfChatIsRegistered(ctx.chatId())) {
-							LOG.warn("/register command received from unregisterd chat '{}'", ctx.chatId());
-							silent.send("Chat not registered. Please run the /start command first.", ctx.chatId());
-						} else {
-							silent.forceReply(message, ctx.chatId());
+						// register this Command
+						Command command = new Command();
+						command.setChatId(ctx.chatId());
+						command.setUserName(ctx.user().username());
+						command.setCommand(ctx.update().getMessage().getText());
+						try {
+							commandService.saveCommand(command);
+							
+							// check if the chat is registered yet 
+							if(!chatService.checkIfChatIsRegistered(ctx.chatId())) {
+								LOG.warn("/register command received from unregisterd chat '{}'", ctx.chatId());
+								silent.send("Chat not registered. Please run the /start command first.", ctx.chatId());
+							} else {
+								silent.forceReply(message, ctx.chatId());
+							}
+							
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							silent.send(String.format("Error handling the /register command: '%s'", e.getMessage()), ctx.chatId());
+							LOG.fatal("Error running /register: {}", e);
 						}
 						
 					}
@@ -142,8 +160,6 @@ public class CryptoManagerBot extends AbilityBot {
 				.build();
 	}
 	
-	
-	
 	public Ability coinCommand() {
 		return Ability.builder()
 				.name("coin")
@@ -151,7 +167,11 @@ public class CryptoManagerBot extends AbilityBot {
 				.locality(ALL)
 				.privacy(PUBLIC)
 				.input(0)
-				.action(ctx -> silent.send("TODO: Handle coin command", ctx.chatId()))
+				.action(ctx -> 
+					{
+						silent.send("TODO: Handle coin command", ctx.chatId());
+					}
+				)
 				.build();
 	}
 
@@ -188,7 +208,6 @@ public class CryptoManagerBot extends AbilityBot {
 	}
 	
 	public Ability testStatus() {
-		
 		return Ability.builder()
 				.name("test")
 				.info("test the bot status")
@@ -196,39 +215,26 @@ public class CryptoManagerBot extends AbilityBot {
 				.privacy(PUBLIC)
 				.action(ctx -> 
 					{
-						// check if the chat is registered yet 
-						if(!chatService.checkIfChatIsRegistered(ctx.chatId())) {
-							LOG.warn("/register command received from unregisterd chat '{}'", ctx.chatId());
-							silent.send("Chat not registered. Please run the /start command first.", ctx.chatId());
-						} else {
-							// get the chat object
-							Chat chat;
-							try {
-								chat = chatService.findChatByTelegramChatId(ctx.chatId());
-								
-								// get the status
-								String status = testCommand.runTestCommand(chat.getApiKey());
-								silent.send(status, ctx.chatId());
-								
-							} catch (Exception e) {
-								e.printStackTrace();
-								String errorMsg = String.format("Something went wrong registering your API: \n\n %s", e.getMessage());
-								silent.send(errorMsg, ctx.chatId());
-							}
-							
-							
+						// register this Command
+						Command command = new Command();
+						command.setChatId(ctx.chatId());
+						command.setUserName(ctx.user().username());
+						command.setCommand(ctx.update().getMessage().getText());
+						try {
+							commandService.saveCommand(command);
+							silent.send(testCommand.runTestCommand(ctx.chatId()), ctx.chatId());
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							silent.send(String.format("Error handling the /test command: '%s'", e.getMessage()), ctx.chatId());
+							LOG.fatal("Error running /test: {}", e);
 						}
-						
-						
-						
 						
 					}
 				)
 				.build();
 	}
 	
-	
-
 	public Ability playWithMe() {
 		String playMessage = "Play with me!";
 

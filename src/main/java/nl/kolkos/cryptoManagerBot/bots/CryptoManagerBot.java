@@ -2,7 +2,7 @@ package nl.kolkos.cryptoManagerBot.bots;
 
 import com.google.common.annotations.VisibleForTesting;
 
-
+import nl.kolkos.cryptoManagerBot.commandHandlers.TestCommand;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
 import nl.kolkos.cryptoManagerBot.services.ChatService;
 
@@ -33,7 +33,10 @@ import static org.telegram.abilitybots.api.objects.Privacy.PUBLIC;
 
 public class CryptoManagerBot extends AbilityBot {
 	private static final Logger LOG = LogManager.getLogger(CryptoManagerBot.class);
+	
 	private ChatService chatService = new ChatService();
+	private TestCommand testCommand = new TestCommand();
+	
 	
 	public CryptoManagerBot(String token, String username) {
 		super(token, username);
@@ -122,7 +125,7 @@ public class CryptoManagerBot extends AbilityBot {
 													
 							// Sends message
 							silent.send(String.format("API Key '%s' registered", apiKey), upd.getMessage().getChatId());
-							silent.send("Send the command /status to check the status of the api key", upd.getMessage().getChatId());	
+							silent.send("Send the command /test to check the status of the api key", upd.getMessage().getChatId());	
 						} catch (Exception e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -184,18 +187,41 @@ public class CryptoManagerBot extends AbilityBot {
 				.build();
 	}
 	
-	public Ability testReplyKeyboard() {
-		String testMessage = "Testje";
+	public Ability testStatus() {
+		
 		return Ability.builder()
 				.name("test")
-				.info("test reply keyboard")
+				.info("test the bot status")
 				.locality(ALL)
 				.privacy(PUBLIC)
 				.action(ctx -> 
 					{
-						silent.forceReply(testMessage, ctx.chatId());
+						// check if the chat is registered yet 
+						if(!chatService.checkIfChatIsRegistered(ctx.chatId())) {
+							LOG.warn("/register command received from unregisterd chat '{}'", ctx.chatId());
+							silent.send("Chat not registered. Please run the /start command first.", ctx.chatId());
+						} else {
+							// get the chat object
+							Chat chat;
+							try {
+								chat = chatService.findChatByTelegramChatId(ctx.chatId());
+								
+								// get the status
+								String status = testCommand.runTestCommand(chat.getApiKey());
+								silent.send(status, ctx.chatId());
+								
+							} catch (Exception e) {
+								e.printStackTrace();
+								String errorMsg = String.format("Something went wrong registering your API: \n\n %s", e.getMessage());
+								silent.send(errorMsg, ctx.chatId());
+							}
+							
+							
+						}
 						
-						silent.send("Hello world!", ctx.chatId());
+						
+						
+						
 					}
 				)
 				.build();

@@ -2,11 +2,14 @@ package nl.kolkos.cryptoManagerBot.bots;
 
 import com.google.common.annotations.VisibleForTesting;
 
+import nl.kolkos.cryptoManagerBot.commandHandlers.CallbackQuery;
+import nl.kolkos.cryptoManagerBot.commandHandlers.CoinCommand;
 import nl.kolkos.cryptoManagerBot.commandHandlers.TestCommand;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
 import nl.kolkos.cryptoManagerBot.objects.Command;
 import nl.kolkos.cryptoManagerBot.services.ChatService;
 import nl.kolkos.cryptoManagerBot.services.CommandService;
+import nl.kolkos.cryptoManagerBot.services.MenuItemService;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,9 +21,11 @@ import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboardMarkup;
+import org.telegram.telegrambots.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.api.objects.replykeyboard.ForceReplyKeyboard;
+import org.telegram.telegrambots.api.objects.replykeyboard.InlineKeyboardMarkup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +43,10 @@ public class CryptoManagerBot extends AbilityBot {
 	
 	private ChatService chatService = new ChatService();
 	private CommandService commandService = new CommandService();
-	private TestCommand testCommand = new TestCommand();
 	
+	private TestCommand testCommand = new TestCommand();
+	private CoinCommand coinCommand = new CoinCommand();
+	private CallbackQuery callbackQuery = new CallbackQuery();
 	
 	public CryptoManagerBot(String token, String username) {
 		super(token, username);
@@ -169,7 +176,29 @@ public class CryptoManagerBot extends AbilityBot {
 				.input(0)
 				.action(ctx -> 
 					{
-						silent.send("TODO: Handle coin command", ctx.chatId());
+						// register this Command
+						Command command = new Command();
+						command.setChatId(ctx.chatId());
+						command.setUserName(ctx.user().username());
+						command.setCommand(ctx.update().getMessage().getText());
+						try {
+							commandService.saveCommand(command);
+							
+							// check if there is an additional argument
+							if(ctx.arguments().length > 0) {
+								String coinSymbol = ctx.firstArg();
+								silent.send(coinCommand.runCoinCommand(ctx.chatId(), coinSymbol), ctx.chatId());
+							}else {
+								silent.send(coinCommand.runCoinCommand(ctx.chatId()), ctx.chatId());
+							}
+							
+							
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							silent.send(String.format("Error handling the /coin command: '%s'", e.getMessage()), ctx.chatId());
+							LOG.fatal("Error running /coin: {}", e);
+						}
 					}
 				)
 				.build();
@@ -193,7 +222,13 @@ public class CryptoManagerBot extends AbilityBot {
 				.locality(ALL)
 				.privacy(PUBLIC)
 				.input(0)
-				.action(ctx -> silent.send("TODO: Handle chart command", ctx.chatId()))
+				.action(ctx -> {
+					silent.send("TODO: Handle chart command", ctx.chatId());
+					
+					SendMessage message = callbackQuery.createMenuForCommand("Which chart you wish to create?", "/chart", ctx.chatId(), 1);
+	                
+	                silent.execute(message);
+				})
 				.build();
 	}
 	
@@ -232,6 +267,17 @@ public class CryptoManagerBot extends AbilityBot {
 						
 					}
 				)
+				.build();
+	}
+	
+	public Ability callbackHandler() {
+		return Ability.builder()
+				.name(DEFAULT)
+				.info("handle callback queries")
+				.locality(ALL)
+				.privacy(PUBLIC)
+				.action(ctx -> {System.out.println("callback received");})
+				.reply(upd -> silent.send("you send: " + upd.getCallbackQuery().getData(), upd.getCallbackQuery().getMessage().getChatId()), CALLBACK_QUERY)
 				.build();
 	}
 	

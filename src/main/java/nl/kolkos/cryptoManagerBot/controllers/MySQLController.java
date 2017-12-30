@@ -100,7 +100,7 @@ public class MySQLController {
 			for(Object x : parameters) {
 				//System.out.println(x.toString());
 				//preparedStatement.setString(i, x.toString());
-				LOG.info("Setting parameter {} => {}", i, x);
+				LOG.trace("Setting parameter {} => {}", i, x);
 				preparedStatement.setObject(i, x);
 				i++;
 			}

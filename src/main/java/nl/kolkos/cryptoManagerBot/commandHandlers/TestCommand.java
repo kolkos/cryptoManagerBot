@@ -59,39 +59,6 @@ public class TestCommand {
 		
 		return result;
 	}
-	
-//	public String runTestCommand(String apiKey) {
-//		LOG.trace("Handling /test command for API key '{}'", apiKey);
-//		
-//		// check if 
-//		
-//		
-//		String result = "";
-//		// run the api command
-//		try {
-//			JSONObject jsonObject = this.runTestApiKeyApiRequest(apiKey);
-//			
-//			// get the status
-//			String status = jsonObject.getString("status");
-//			if(status.equals("error")) {
-//				LOG.warn("Error for API key '{}', status: '{}', reason: '{}'", apiKey, status, jsonObject.getString("reason"));
-//				result += String.format("API Status: %s\nAPI Error:%s", status, jsonObject.getString("reason"));
-//			}else {
-//				LOG.info("API key '{}' verified successfully, status: '{}'", apiKey, status);
-//				result += String.format("API Status: %s", status);
-//			}
-//			
-//			
-//		} catch (Exception e) {
-//			LOG.fatal("Error handling API request for key '{}', error: '{}'", apiKey, e);
-//			result += String.format("API Status: %s\nAPI Error:%s", "ERROR", e.getMessage());
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//			
-//		}
-//
-//		return result;
-//	}
-	
+
 	
 }

@@ -3,12 +3,14 @@ package nl.kolkos.cryptoManagerBot.bots;
 import com.google.common.annotations.VisibleForTesting;
 
 
-import nl.kolkos.cryptoManagerBot.commands.CallbackQueryCommand;
 import nl.kolkos.cryptoManagerBot.commands.CoinCommand;
 import nl.kolkos.cryptoManagerBot.commands.TestCommand;
+import nl.kolkos.cryptoManagerBot.objects.CallbackQuery;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
 import nl.kolkos.cryptoManagerBot.objects.Command;
+import nl.kolkos.cryptoManagerBot.routers.CallbackQueryRouter;
 import nl.kolkos.cryptoManagerBot.routers.CommandRouter;
+import nl.kolkos.cryptoManagerBot.services.CallbackQueryService;
 import nl.kolkos.cryptoManagerBot.services.ChatService;
 import nl.kolkos.cryptoManagerBot.services.CommandService;
 
@@ -42,13 +44,11 @@ public class CryptoManagerBot extends AbilityBot {
 	
 	private ChatService chatService = new ChatService();
 	private CommandService commandService = new CommandService();
+	private CallbackQueryService callbackQueryService = new CallbackQueryService();
 	
-	private TestCommand testCommand = new TestCommand();
-	private CoinCommand coinCommand = new CoinCommand();
-	private CallbackQueryCommand callbackQueryCommand = new CallbackQueryCommand();
+	
 	private CommandRouter commandRouter = new CommandRouter();
-	
-	Timer timer;
+	private CallbackQueryRouter callbackQueryRouter = new CallbackQueryRouter();
 	
 	public CryptoManagerBot(String token, String username) {
 		super(token, username);
@@ -62,6 +62,10 @@ public class CryptoManagerBot extends AbilityBot {
 				// loop through the commands
 				for(Command command : unhandledCommands) {
 					LOG.info("Handling command '{}' send by '{}' in chat '{}'", command.getCommand(), command.getUserName(), command.getChatId());
+					
+					// fix for group commands (automatically append the bot name)
+					String fixedCommand = command.getCommand().split("@")[0];
+					command.setCommand(fixedCommand);
 					
 					// send the command object to the router
 					SendMessage message = commandRouter.redirectCommand(command);
@@ -77,6 +81,27 @@ public class CryptoManagerBot extends AbilityBot {
 				// TODO Auto-generated catch block
 				LOG.fatal("Error handling unhandled commands: '{}'", e);
 			}
+			
+			LOG.trace("Checking for unhandled callback queries...");
+			try {
+				List<CallbackQuery> unhandledCallbackQueries = callbackQueryService.getUnhandledCallbackQueries();
+				// loop through the callback queries
+				for(CallbackQuery callbackQuery : unhandledCallbackQueries) {
+					LOG.info("Handling callback query '{}' send by '{}' in chat '{}'", callbackQuery.getCallbackData(), callbackQuery.getUserName(), callbackQuery.getChatId());
+					
+					EditMessageText editMessageText = callbackQueryRouter.callbackDataForwarder(callbackQuery);
+					
+					// send the message
+					this.execute(editMessageText);
+					
+					// update this callback query
+					callbackQuery.setHandled(1);
+					callbackQueryService.updateCallbackQuery(callbackQuery);
+				}
+			} catch (Exception e) {
+				LOG.fatal("Error handling unhandled callback queries: '{}'", e);
+			}
+			
 		}, 0, 1000L, TimeUnit.MILLISECONDS);
 	}
 	
@@ -297,57 +322,25 @@ public class CryptoManagerBot extends AbilityBot {
 						String user = upd.getCallbackQuery().getFrom().getUserName();
 						
 						LOG.info("Received callback query. Data='{}', chatId='{}', msgId='{}', user='{}'", callbackData, chatId, msgId, user);
-						EditMessageText editMessageText = callbackQueryCommand.callbackDataForwarder(
-								callbackData, 
-								chatId, 
-								msgId);
 						
-						silent.execute(editMessageText);
+						// register the callback query
+						CallbackQuery callbackQuery = new CallbackQuery();
+						callbackQuery.setChatId(chatId);
+						callbackQuery.setMsgId(msgId);
+						callbackQuery.setUserName(user);
+						callbackQuery.setCallbackData(callbackData);
+						
+						try {
+							callbackQueryService.saveCallbackQuery(callbackQuery);
+						} catch (Exception e) {
+							LOG.fatal("Error handling callback query: '{}'", e);
+						}
 						
 					},
 					CALLBACK_QUERY)
 				.build();
 	}
 	
-	public Ability playWithMe() {
-		String playMessage = "Play with me!";
-
-		return Ability.builder()
-				.name("play")
-				.info("Do you want to play with me?")
-				.privacy(PUBLIC)
-				.locality(ALL)
-				.input(0)
-				.action(ctx -> silent.forceReply(playMessage, ctx.chatId()))
-				// The signature of a reply is -> (Consumer<Update> action, Predicate<Update>...
-				// conditions)
-				// So, we first declare the action that takes an update (NOT A MESSAGECONTEXT)
-				// like the action above
-				// The reason of that is that a reply can be so versatile depending on the
-				// message, context becomes an inefficient wrapping
-				.reply(upd -> {
-					// Prints to console
-					System.out.println("I'm in a reply!");
-					// Sends message
-					silent.send("It's been nice playing with you!", upd.getMessage().getChatId());
-				},
-					// Now we start declaring conditions, MESSAGE is a member of the enum Flag class
-					// That class contains out-of-the-box predicates for your replies!
-					// MESSAGE means that the update must have a message
-					// This is imported statically, Flag.MESSAGE
-					MESSAGE,
-					// REPLY means that the update must be a reply, Flag.REPLY
-					REPLY,
-					// A new predicate user-defined
-					// The reply must be to the bot
-					isReplyToBot(),
-					// If we process similar logic in other abilities, then we have to make this
-					// reply specific to this message
-					// The reply is to the playMessage
-					isReplyToMessage(playMessage))
-				// You can add more replies by calling .reply(...)
-				.build();
-	}
 
 	private Predicate<Update> isReplyToMessage(String message) {
 		return upd -> {

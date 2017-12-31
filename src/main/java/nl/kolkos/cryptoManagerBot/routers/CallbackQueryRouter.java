@@ -1,16 +1,14 @@
-package nl.kolkos.cryptoManagerBot.commands;
+package nl.kolkos.cryptoManagerBot.routers;
 
 import java.util.HashMap;
 
 import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
 
+import nl.kolkos.cryptoManagerBot.commands.PortfolioCommand;
+import nl.kolkos.cryptoManagerBot.objects.CallbackQuery;
 
-public class CallbackQueryCommand {
-	
-	private PortfolioCommand portfolioCommand = new PortfolioCommand();
-	
-	
-	
+public class CallbackQueryRouter {
+private PortfolioCommand portfolioCommand = new PortfolioCommand();
 	
 	private HashMap<String, String> splitCallbackData(String callbackData){
 		HashMap<String, String> callbackDataMap = new HashMap<>();
@@ -30,12 +28,12 @@ public class CallbackQueryCommand {
 	}
 	
 	
-	public EditMessageText callbackDataForwarder(String callbackData, long chatId, int msgId ) {
-		HashMap<String, String> callbackDataMap = this.splitCallbackData(callbackData);
+	public EditMessageText callbackDataForwarder(CallbackQuery callbackQuery) {
+		HashMap<String, String> callbackDataMap = this.splitCallbackData(callbackQuery.getCallbackData());
 		
 		EditMessageText editMessageText = new EditMessageText()
-                .setChatId(chatId)
-                .setMessageId(msgId)
+                .setChatId(callbackQuery.getChatId())
+                .setMessageId(callbackQuery.getMsgId())
                 .setText("Unknown command");
 		
 		// check if the command option exists in the callbackDataMap
@@ -46,7 +44,7 @@ public class CallbackQueryCommand {
 		
 		switch (callbackDataMap.get("command")) {
 		case "generatePortfolioMenu":
-			editMessageText = portfolioCommand.generatePortfolioMenu(chatId, msgId);
+			editMessageText = portfolioCommand.generatePortfolioMenu(callbackQuery.getChatId(), callbackQuery.getMsgId());
 			break;
 
 		default:

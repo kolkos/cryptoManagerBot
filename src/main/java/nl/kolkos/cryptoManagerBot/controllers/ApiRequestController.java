@@ -68,7 +68,7 @@ public class ApiRequestController {
 		
 		this.setApiBaseUrl(url);
 		
-		LOG.info("API Base URL: {}", this.getApiBaseUrl());
+		LOG.trace("API Base URL: {}", this.getApiBaseUrl());
 		LOG.trace("Finished loading API configuration");		
 	}
 		

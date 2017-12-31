@@ -21,17 +21,8 @@ public class MenuItemRepository {
 	private List<MenuItem> getMenuItems() {
 		List<MenuItem> menuItems = new ArrayList<>();
 		
-		menuItems.add(new MenuItem("/chart", "Portfolio chart", "command=getPortfolios"));
+		menuItems.add(new MenuItem("/chart", "Portfolio chart", "command=generatePortfolioMenu"));
 		menuItems.add(new MenuItem("/chart", "Wallet chart", "command=getWallets"));
-		
-		menuItems.add(new MenuItem("/test", "Test button 1", "command=1"));
-		menuItems.add(new MenuItem("/test", "Test button 2", "command=2"));
-		menuItems.add(new MenuItem("/test", "Test button 3", "command=3"));
-		menuItems.add(new MenuItem("/test", "Test button 4", "command=4"));
-		menuItems.add(new MenuItem("/test", "Test button 5", "command=5"));
-		menuItems.add(new MenuItem("/test", "Test button 6", "command=6"));
-		menuItems.add(new MenuItem("/test", "Test button 7", "command=7"));
-		
 		
 		return menuItems;
 	}

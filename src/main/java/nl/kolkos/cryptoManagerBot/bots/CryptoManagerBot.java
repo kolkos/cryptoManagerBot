@@ -2,7 +2,7 @@ package nl.kolkos.cryptoManagerBot.bots;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import nl.kolkos.cryptoManagerBot.commandHandlers.CallbackQuery;
+import nl.kolkos.cryptoManagerBot.commandHandlers.CallbackQueryCommand;
 import nl.kolkos.cryptoManagerBot.commandHandlers.CoinCommand;
 import nl.kolkos.cryptoManagerBot.commandHandlers.TestCommand;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
@@ -18,6 +18,7 @@ import org.telegram.abilitybots.api.bot.AbilityBot;
 import org.telegram.abilitybots.api.objects.Ability;
 import org.telegram.abilitybots.api.sender.MessageSender;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
+import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboardMarkup;
@@ -46,7 +47,7 @@ public class CryptoManagerBot extends AbilityBot {
 	
 	private TestCommand testCommand = new TestCommand();
 	private CoinCommand coinCommand = new CoinCommand();
-	private CallbackQuery callbackQuery = new CallbackQuery();
+	private CallbackQueryCommand callbackQuery = new CallbackQueryCommand();
 	
 	public CryptoManagerBot(String token, String username) {
 		super(token, username);
@@ -223,8 +224,6 @@ public class CryptoManagerBot extends AbilityBot {
 				.privacy(PUBLIC)
 				.input(0)
 				.action(ctx -> {
-					silent.send("TODO: Handle chart command", ctx.chatId());
-					
 					SendMessage message = callbackQuery.createMenuForCommand("Which chart you wish to create?", "/chart", ctx.chatId(), 1);
 	                
 	                silent.execute(message);
@@ -277,7 +276,22 @@ public class CryptoManagerBot extends AbilityBot {
 				.locality(ALL)
 				.privacy(PUBLIC)
 				.action(ctx -> {System.out.println("callback received");})
-				.reply(upd -> silent.send("you send: " + upd.getCallbackQuery().getData(), upd.getCallbackQuery().getMessage().getChatId()), CALLBACK_QUERY)
+				.reply(upd -> 
+					{
+						String callbackData = upd.getCallbackQuery().getData();
+						long chatId = upd.getCallbackQuery().getMessage().getChatId();
+						int msgId = upd.getCallbackQuery().getMessage().getMessageId();
+						
+						LOG.info("Received callback query. Data='{}', chatId='{}', msgId='{}'", callbackData, chatId, msgId);
+						EditMessageText editMessageText = callbackQuery.callbackDataForwarder(
+								callbackData, 
+								chatId, 
+								msgId);
+						
+						silent.execute(editMessageText);
+						
+					},
+					CALLBACK_QUERY)
 				.build();
 	}
 	

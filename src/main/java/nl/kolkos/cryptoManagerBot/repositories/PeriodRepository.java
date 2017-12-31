@@ -38,6 +38,7 @@ public class PeriodRepository {
 		periods.add(new Period("12h", "Last 12 hour"));
 		periods.add(new Period("1d", "Last day"));
 		periods.add(new Period("1w", "Last week"));
+		periods.add(new Period("4w", "Last 4 weeks"));
 		periods.add(new Period("1y", "Last year"));
 		
 		return periods;

@@ -2,9 +2,19 @@ package nl.kolkos.cryptoManagerBot.objects;
 
 public class Interval {
 	private long id;
-	private String forPeriod;
+	private String period;
 	private String value;
 	private String text;
+	
+	public Interval() {
+		
+	}
+	
+	public Interval(String period, String value, String text) {
+		this.setPeriod(period);
+		this.setValue(value);
+		this.setText(text);
+	}
 	
 	public long getId() {
 		return id;
@@ -12,11 +22,12 @@ public class Interval {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getForPeriod() {
-		return forPeriod;
+
+	public String getPeriod() {
+		return period;
 	}
-	public void setForPeriod(String forPeriod) {
-		this.forPeriod = forPeriod;
+	public void setPeriod(String period) {
+		this.period = period;
 	}
 	public String getValue() {
 		return value;

@@ -107,7 +107,7 @@ public class MySQLController {
 			
 			resultSet = preparedStatement.executeQuery();
 			
-			LOG.info("Query OK: ({})", query);
+			LOG.trace("Query OK: ({})", query);
 		} catch (Exception e) {
 			LOG.fatal("Error executing query: '{}'", query);
     			LOG.fatal("Used parameters: '{}'", parameters);
@@ -137,14 +137,14 @@ public class MySQLController {
 			int i = 1;
 			for(Object x : parameters) {
 				//System.out.println(x.toString());
-				LOG.info("Setting parameter {} => {}", i, x);
+				LOG.trace("Setting parameter {} => {}", i, x);
 				preparedStatement.setString(i, x.toString());
 				i++;
 			}
 			
 			// just execute
 			preparedStatement.executeUpdate();
-			LOG.info("Query OK: ({})", query);
+			LOG.trace("Query OK: ({})", query);
 		} catch (Exception e) {
         		LOG.fatal("Error executing query: '{}'", query);
         		LOG.fatal("Used parameters: '{}'", parameters);

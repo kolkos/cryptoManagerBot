@@ -1,4 +1,4 @@
-package nl.kolkos.cryptoManagerBot.commandHandlers;
+package nl.kolkos.cryptoManagerBot.commands;
 
 import java.nio.channels.SelectableChannel;
 import java.util.ArrayList;

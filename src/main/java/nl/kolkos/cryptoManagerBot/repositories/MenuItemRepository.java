@@ -112,7 +112,7 @@ public class MenuItemRepository {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		mysql.close();
 		
 		
 		return menuItems;

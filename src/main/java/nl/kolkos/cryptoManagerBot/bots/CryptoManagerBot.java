@@ -2,18 +2,20 @@ package nl.kolkos.cryptoManagerBot.bots;
 
 import com.google.common.annotations.VisibleForTesting;
 
-import nl.kolkos.cryptoManagerBot.commandHandlers.CallbackQueryCommand;
-import nl.kolkos.cryptoManagerBot.commandHandlers.CoinCommand;
-import nl.kolkos.cryptoManagerBot.commandHandlers.TestCommand;
+
+import nl.kolkos.cryptoManagerBot.commands.CallbackQueryCommand;
+import nl.kolkos.cryptoManagerBot.commands.CoinCommand;
+import nl.kolkos.cryptoManagerBot.commands.TestCommand;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
 import nl.kolkos.cryptoManagerBot.objects.Command;
+import nl.kolkos.cryptoManagerBot.routers.CommandRouter;
 import nl.kolkos.cryptoManagerBot.services.ChatService;
 import nl.kolkos.cryptoManagerBot.services.CommandService;
-import nl.kolkos.cryptoManagerBot.services.MenuItemService;
+
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.glassfish.hk2.api.Visibility;
+
 import org.telegram.abilitybots.api.bot.AbilityBot;
 import org.telegram.abilitybots.api.objects.Ability;
 import org.telegram.abilitybots.api.sender.MessageSender;
@@ -21,16 +23,12 @@ import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
-import org.telegram.telegrambots.api.objects.replykeyboard.ReplyKeyboardMarkup;
-import org.telegram.telegrambots.api.objects.replykeyboard.buttons.InlineKeyboardButton;
-import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardButton;
-import org.telegram.telegrambots.api.objects.replykeyboard.buttons.KeyboardRow;
-import org.telegram.telegrambots.api.objects.replykeyboard.ForceReplyKeyboard;
-import org.telegram.telegrambots.api.objects.replykeyboard.InlineKeyboardMarkup;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.Timer;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
 
 import static org.telegram.abilitybots.api.objects.Flag.*;
@@ -47,16 +45,49 @@ public class CryptoManagerBot extends AbilityBot {
 	
 	private TestCommand testCommand = new TestCommand();
 	private CoinCommand coinCommand = new CoinCommand();
-	private CallbackQueryCommand callbackQuery = new CallbackQueryCommand();
+	private CallbackQueryCommand callbackQueryCommand = new CallbackQueryCommand();
+	private CommandRouter commandRouter = new CommandRouter();
+	
+	Timer timer;
 	
 	public CryptoManagerBot(String token, String username) {
 		super(token, username);
+		
+		// this will handle the commands in the database
+		ScheduledExecutorService execService = Executors.newScheduledThreadPool(5);
+		execService.scheduleAtFixedRate(()->{
+			LOG.trace("Checking for unhandled commands...");
+			try {
+				List<Command> unhandledCommands = commandService.getUnhandledCommands();
+				// loop through the commands
+				for(Command command : unhandledCommands) {
+					LOG.info("Handling command '{}' send by '{}' in chat '{}'", command.getCommand(), command.getUserName(), command.getChatId());
+					
+					// send the command object to the router
+					SendMessage message = commandRouter.redirectCommand(command);
+					
+					// send the message
+					this.execute(message);
+					
+					// now update the command (handled = 1)
+					command.setCommandHandled(1);
+					commandService.updateCommand(command);
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				LOG.fatal("Error handling unhandled commands: '{}'", e);
+			}
+		}, 0, 1000L, TimeUnit.MILLISECONDS);
 	}
+	
+	
 
 	@Override
 	public int creatorId() {
 		return 204878733;
 	}
+	
+	
 	
 	public Ability startCommand() {
 		return Ability.builder()
@@ -184,22 +215,10 @@ public class CryptoManagerBot extends AbilityBot {
 						command.setCommand(ctx.update().getMessage().getText());
 						try {
 							commandService.saveCommand(command);
-							
-							// check if there is an additional argument
-							if(ctx.arguments().length > 0) {
-								String coinSymbol = ctx.firstArg();
-								silent.send(coinCommand.runCoinCommand(ctx.chatId(), coinSymbol), ctx.chatId());
-							}else {
-								silent.send(coinCommand.runCoinCommand(ctx.chatId()), ctx.chatId());
-							}
-							
-							
 						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-							silent.send(String.format("Error handling the /coin command: '%s'", e.getMessage()), ctx.chatId());
 							LOG.fatal("Error running /coin: {}", e);
 						}
+						// ok done, the scheduled task will handle the command
 					}
 				)
 				.build();
@@ -224,7 +243,7 @@ public class CryptoManagerBot extends AbilityBot {
 				.privacy(PUBLIC)
 				.input(0)
 				.action(ctx -> {
-					SendMessage message = callbackQuery.createMenuForCommand("Which chart you wish to create?", "/chart", ctx.chatId(), 1);
+					SendMessage message = callbackQueryCommand.createMenuForCommand("Which chart you wish to create?", "/chart", ctx.chatId(), 1);
 	                
 	                silent.execute(message);
 				})
@@ -281,9 +300,10 @@ public class CryptoManagerBot extends AbilityBot {
 						String callbackData = upd.getCallbackQuery().getData();
 						long chatId = upd.getCallbackQuery().getMessage().getChatId();
 						int msgId = upd.getCallbackQuery().getMessage().getMessageId();
+						String user = upd.getCallbackQuery().getFrom().getUserName();
 						
-						LOG.info("Received callback query. Data='{}', chatId='{}', msgId='{}'", callbackData, chatId, msgId);
-						EditMessageText editMessageText = callbackQuery.callbackDataForwarder(
+						LOG.info("Received callback query. Data='{}', chatId='{}', msgId='{}', user='{}'", callbackData, chatId, msgId, user);
+						EditMessageText editMessageText = callbackQueryCommand.callbackDataForwarder(
 								callbackData, 
 								chatId, 
 								msgId);

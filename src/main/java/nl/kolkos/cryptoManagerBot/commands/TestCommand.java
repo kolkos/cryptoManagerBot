@@ -1,4 +1,4 @@
-package nl.kolkos.cryptoManagerBot.commandHandlers;
+package nl.kolkos.cryptoManagerBot.commands;
 
 
 import org.apache.logging.log4j.LogManager;

@@ -1,4 +1,4 @@
-package nl.kolkos.cryptoManagerBot.commandHandlers;
+package nl.kolkos.cryptoManagerBot.commands;
 
 import java.util.ArrayList;
 import java.util.List;

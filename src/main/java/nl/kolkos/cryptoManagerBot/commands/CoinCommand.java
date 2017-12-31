@@ -1,13 +1,15 @@
-package nl.kolkos.cryptoManagerBot.commandHandlers;
+package nl.kolkos.cryptoManagerBot.commands;
 
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.telegram.telegrambots.api.methods.send.SendMessage;
 
 import nl.kolkos.cryptoManagerBot.controllers.ApiRequestController;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
+import nl.kolkos.cryptoManagerBot.objects.Command;
 import nl.kolkos.cryptoManagerBot.services.ChatService;
 
 public class CoinCommand {
@@ -16,6 +18,24 @@ public class CoinCommand {
 	
 	private ChatService chatService = new ChatService();
 	
+	public SendMessage coinCommandAdapter(Command command) {
+		// check if the coin has an additional parameter
+		String[] coinCommand = command.getCommand().split(" ");
+		String messageText = "";
+		if(coinCommand.length > 1) {
+			String coinSymbol = coinCommand[1];
+			messageText = this.runCoinCommand(command.getChatId(), coinSymbol);
+		}else {
+			messageText = this.runCoinCommand(command.getChatId());
+		}
+		
+		// create the SendMessage
+		SendMessage message = new SendMessage() 
+                .setChatId(command.getChatId())
+                .setText(messageText);
+		
+		return message;
+	}
 	
 	private JSONObject runSingleCoinApiRequest(String apiKey, String coinSymbol) throws Exception {
 		// form the complete url

@@ -12,6 +12,10 @@ public class MenuItem {
 		this.setCallbackData(callbackData);
 	}
 	
+	public MenuItem() {
+		
+	}
+	
 	public long getId() {
 		return id;
 	}

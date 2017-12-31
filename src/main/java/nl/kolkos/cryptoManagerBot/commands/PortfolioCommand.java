@@ -10,12 +10,15 @@ import org.telegram.telegrambots.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
 import nl.kolkos.cryptoManagerBot.controllers.ApiRequestController;
+import nl.kolkos.cryptoManagerBot.objects.CallbackQuery;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
 import nl.kolkos.cryptoManagerBot.objects.MenuItem;
 import nl.kolkos.cryptoManagerBot.services.ChatService;
+import nl.kolkos.cryptoManagerBot.services.MenuItemService;
 
 public class PortfolioCommand {
 	private ChatService chatService = new ChatService();
+	private MenuItemService menuItemService = new MenuItemService();
 	private ApiRequestController apiRequestController = new ApiRequestController();
 	
 	private JSONArray getPortfolios(String apiKey) throws Exception {
@@ -28,20 +31,24 @@ public class PortfolioCommand {
 		return jsonArray;
 	}
 	
-	public EditMessageText generatePortfolioMenu(long chatId, int msgId) {
+	
+	public EditMessageText generatePortfolioMenu(CallbackQuery callbackQuery) {
 		EditMessageText portfolioMenu = new EditMessageText()
-                .setChatId(chatId)
-                .setMessageId(msgId)
+                .setChatId(callbackQuery.getChatId())
+                .setMessageId(callbackQuery.getMsgId())
                 .setText("Please select a portfolio");
 		
 		// get the chat
 		try {
-			Chat chat = chatService.findChatByTelegramChatId(chatId);
+			Chat chat = chatService.findChatByTelegramChatId(callbackQuery.getChatId());
 			// get the portfolios from the api
 			JSONArray jsonArray = this.getPortfolios(chat.getApiKey());
 			
-			InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
-	        List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
+	        // create the menu via the Menu Item Service
+	        // so we need to create a menu item list
+	        List<MenuItem> menuItems = new ArrayList<>();
+	        
+	        
 	        
 			// loop through the array
 			for(int i = 0; i < jsonArray.length(); i++) {
@@ -51,12 +58,15 @@ public class PortfolioCommand {
 				String text = jsonObject.getString("name");
 				String callbackData = String.format("command=getPeriodOptions,object=portfolio,id=%d", jsonObject.getInt("id"));
 				
-				// create a menu item and add it to the list
-				List<InlineKeyboardButton> rowInline = new ArrayList<>();
-				rowInline.add(new InlineKeyboardButton().setText(text).setCallbackData(callbackData));
-				rowsInline.add(rowInline);
+				MenuItem menuItem = new MenuItem();
+				menuItem.setCallbackData(callbackData);
+				menuItem.setText(text);
+				menuItems.add(menuItem);
 				
 			}
+			
+			InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
+	        List<List<InlineKeyboardButton>> rowsInline = menuItemService.generateMenu(menuItems, 1);
 			
 			markupInline.setKeyboard(rowsInline);
 			portfolioMenu.setReplyMarkup(markupInline);

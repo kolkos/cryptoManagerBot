@@ -23,17 +23,25 @@ public class MenuItemService {
                 .setChatId(command.getChatId())
                 .setText(messageText);
 		
-		InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
-        List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
-        List<InlineKeyboardButton> rowInline = new ArrayList<>();
-        
-        // get the menu items
+		// get the menu items
         List<MenuItem> menuItems = this.getMenuItemsForCommand(command.getCommand());
         
-        // now loop through the menu items
+        InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
+        List<List<InlineKeyboardButton>> rowsInline = this.generateMenu(menuItems, columns);
+        
+        markupInline.setKeyboard(rowsInline);
+        message.setReplyMarkup(markupInline);
+        
+		return message;
+	}
+	
+	public List<List<InlineKeyboardButton>> generateMenu(List<MenuItem> menuItems, int columns){
+		List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
+		List<InlineKeyboardButton> rowInline = new ArrayList<>();
+		
+		// now loop through the menu items
         int currentColumn = 0;
 
-        //boolean createNewRow = false;
         for(MenuItem menuItem : menuItems) {
         		// check if a new column needs to be created
         		
@@ -57,10 +65,7 @@ public class MenuItemService {
         
         // add any leftover rows to the rows list
         rowsInline.add(rowInline);
-        
-        markupInline.setKeyboard(rowsInline);
-        message.setReplyMarkup(markupInline);
-        
-		return message;
+		
+		return rowsInline;
 	}
 }

@@ -1,5 +1,6 @@
 package nl.kolkos.cryptoManagerBot.services;
 
+import java.util.HashMap;
 import java.util.List;
 
 import nl.kolkos.cryptoManagerBot.objects.CallbackQuery;
@@ -18,5 +19,17 @@ public class CallbackQueryService {
 	
 	public void updateCallbackQuery(CallbackQuery callbackQuery) throws Exception {
 		callbackQueryRepository.updateCallbackQuery(callbackQuery);
+	}
+	
+	public boolean checkAllRequiredFieldsAreSet(HashMap<String, String> callbackDataMap, List<String> requiredFields) {
+		// loop through the required fields
+		boolean requiredFieldsCheckOk = true;
+		for(String requiredField : requiredFields) {
+			if(!callbackDataMap.containsKey(requiredField)) {
+				requiredFieldsCheckOk = false;
+			}
+		}
+		
+		return requiredFieldsCheckOk;
 	}
 }

@@ -76,6 +76,7 @@ public class CallbackQueryRepository {
 			unhandledCallbackQueries.add(callbackQuery);
 		}
 		
+		mysql.close();
 		return unhandledCallbackQueries;
 	}
 }

@@ -2,9 +2,6 @@ package nl.kolkos.cryptoManagerBot.bots;
 
 import com.google.common.annotations.VisibleForTesting;
 
-
-import nl.kolkos.cryptoManagerBot.commands.CoinCommand;
-import nl.kolkos.cryptoManagerBot.commands.TestCommand;
 import nl.kolkos.cryptoManagerBot.objects.CallbackQuery;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
 import nl.kolkos.cryptoManagerBot.objects.Command;
@@ -27,7 +24,6 @@ import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
 
 import java.util.List;
-import java.util.Timer;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -313,6 +309,7 @@ public class CryptoManagerBot extends AbilityBot {
 				.info("handle callback queries")
 				.locality(ALL)
 				.privacy(PUBLIC)
+				.flag(CALLBACK_QUERY)
 				.action(ctx -> {System.out.println("callback received");})
 				.reply(upd -> 
 					{

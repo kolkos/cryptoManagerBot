@@ -4,11 +4,13 @@ import java.util.HashMap;
 
 import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
 
+import nl.kolkos.cryptoManagerBot.commands.PeriodCommand;
 import nl.kolkos.cryptoManagerBot.commands.PortfolioCommand;
 import nl.kolkos.cryptoManagerBot.objects.CallbackQuery;
 
 public class CallbackQueryRouter {
-private PortfolioCommand portfolioCommand = new PortfolioCommand();
+	private PortfolioCommand portfolioCommand = new PortfolioCommand();
+	private PeriodCommand periodCommand = new PeriodCommand();
 	
 	private HashMap<String, String> splitCallbackData(String callbackData){
 		HashMap<String, String> callbackDataMap = new HashMap<>();
@@ -27,7 +29,6 @@ private PortfolioCommand portfolioCommand = new PortfolioCommand();
 		return callbackDataMap;
 	}
 	
-	
 	public EditMessageText callbackDataForwarder(CallbackQuery callbackQuery) {
 		HashMap<String, String> callbackDataMap = this.splitCallbackData(callbackQuery.getCallbackData());
 		
@@ -44,9 +45,11 @@ private PortfolioCommand portfolioCommand = new PortfolioCommand();
 		
 		switch (callbackDataMap.get("command")) {
 		case "generatePortfolioMenu":
-			editMessageText = portfolioCommand.generatePortfolioMenu(callbackQuery.getChatId(), callbackQuery.getMsgId());
+			editMessageText = portfolioCommand.generatePortfolioMenu(callbackQuery);
 			break;
-
+		case "getPeriodOptions":
+			editMessageText = periodCommand.generatePeriodMenu(callbackQuery, callbackDataMap);
+			break;
 		default:
 			break;
 		}

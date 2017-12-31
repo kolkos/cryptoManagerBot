@@ -8,7 +8,7 @@ public class Command {
 	private String userName;
 	private Date date;
 	private String command;
-	private int commandHandled;
+	private int commandHandled = 0;
 	private Date timestampHandled;
 	
 	public long getId() {

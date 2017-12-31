@@ -4,9 +4,11 @@ package nl.kolkos.cryptoManagerBot.commands;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
+import org.telegram.telegrambots.api.methods.send.SendMessage;
 
 import nl.kolkos.cryptoManagerBot.controllers.ApiRequestController;
 import nl.kolkos.cryptoManagerBot.objects.Chat;
+import nl.kolkos.cryptoManagerBot.objects.Command;
 import nl.kolkos.cryptoManagerBot.services.ChatService;
 
 public class TestCommand {
@@ -15,6 +17,16 @@ public class TestCommand {
 	
 	private ChatService chatService = new ChatService();
 	
+	public SendMessage testCommandAdapter(Command command) {
+		LOG.trace("Handling /test command");
+		// create the SendMessage
+		// handle the /start command
+		SendMessage message = new SendMessage() 
+                .setChatId(command.getChatId())
+                .setText(this.runTestCommand(command.getChatId()));
+		
+		return message;
+	}
 	
 	public JSONObject runTestApiKeyApiRequest(String apiKey) throws Exception {
 		// form the complete url

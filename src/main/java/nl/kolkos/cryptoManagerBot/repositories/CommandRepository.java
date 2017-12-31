@@ -28,11 +28,13 @@ public class CommandRepository {
 	
 	public void saveCommand(Command command) throws Exception {
 		this.createCommandTable();
-		String query = "INSERT INTO command (chat_id, username, command) VALUES (?, ?, ?);";
+		
+		String query = "INSERT INTO command (chat_id, username, command, handled) VALUES (?, ?, ?, ?);";
 		Object[] parameters = new Object[] {
 				command.getChatId(),
 				command.getUserName(),
-				command.getCommand()
+				command.getCommand(),
+				command.getCommandHandled()
 		};
 		MySQLController mysql = new MySQLController();
 		mysql.executeUpdateQuery(query, parameters);
@@ -66,6 +68,7 @@ public class CommandRepository {
 			command.setId(resultSet.getLong("id"));
 			command.setChatId(resultSet.getLong("chat_id"));
 			command.setCommand(resultSet.getString("command"));
+			command.setUserName(resultSet.getString("username"));
 			
 			// add to the list
 			unhandledCommands.add(command);

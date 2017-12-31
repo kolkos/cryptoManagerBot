@@ -92,7 +92,7 @@ public class CryptoManagerBot extends AbilityBot {
 	public Ability startCommand() {
 		return Ability.builder()
 				.name("start")
-				.info("Start using this bot")
+				.info("Run this command to start using this bot")
 				.locality(ALL)
 				.privacy(PUBLIC)
 				.input(0)
@@ -100,29 +100,18 @@ public class CryptoManagerBot extends AbilityBot {
 					{
 						LOG.info("Received the command /start from chat '{}' send by '{}'", ctx.chatId(), ctx.user().username());
 						
-						// create new Chat object
-						Chat chat = new Chat();
-						chat.setTelegramChatId(ctx.chatId());
-						chat.setChatName(ctx.user().fullName());
-						chat.setApiKey("");
-						
-						// save the chat
+						// register this Command
+						Command command = new Command();
+						command.setChatId(ctx.chatId());
+						command.setUserName(ctx.user().username());
+						command.setCommand(ctx.update().getMessage().getText());
 						try {
-							chatService.saveChat(chat);
-							String message = "";
-							message += "Thank you, the chat is now registered.";
-							message += "\n\n";
-							message += "Now run the /register command to register your cryptoManager API Key";
-														
-							silent.send(message, ctx.chatId());
+							commandService.saveCommand(command);
 						} catch (Exception e) {
-							String message = String.format("Something went wrong registering your chat: \n\n %s", e.getMessage());
-							silent.send(message, ctx.chatId());
-							
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-							LOG.fatal("Error registering chat: {}", e);
+							LOG.fatal("Error running /start: {}", e);
 						}
+						// ok done, the scheduled task will handle the command
+						
 					}
 				)
 				.build();
@@ -143,6 +132,7 @@ public class CryptoManagerBot extends AbilityBot {
 						command.setChatId(ctx.chatId());
 						command.setUserName(ctx.user().username());
 						command.setCommand(ctx.update().getMessage().getText());
+						command.setCommandHandled(1);
 						try {
 							commandService.saveCommand(command);
 							
@@ -275,14 +265,10 @@ public class CryptoManagerBot extends AbilityBot {
 						command.setCommand(ctx.update().getMessage().getText());
 						try {
 							commandService.saveCommand(command);
-							silent.send(testCommand.runTestCommand(ctx.chatId()), ctx.chatId());
 						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-							silent.send(String.format("Error handling the /test command: '%s'", e.getMessage()), ctx.chatId());
 							LOG.fatal("Error running /test: {}", e);
 						}
-						
+						// scheduler will handle the command
 					}
 				)
 				.build();

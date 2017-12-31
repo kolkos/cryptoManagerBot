@@ -5,12 +5,17 @@ import org.apache.logging.log4j.Logger;
 import org.telegram.telegrambots.api.methods.send.SendMessage;
 
 import nl.kolkos.cryptoManagerBot.commands.CoinCommand;
+import nl.kolkos.cryptoManagerBot.commands.StartCommand;
+import nl.kolkos.cryptoManagerBot.commands.TestCommand;
 import nl.kolkos.cryptoManagerBot.objects.Command;
 
 public class CommandRouter {
 	private static final Logger LOG = LogManager.getLogger(CommandRouter.class);
 	
 	private CoinCommand coinCommand = new CoinCommand();
+	private StartCommand startCommand = new StartCommand();
+	private TestCommand testCommand = new TestCommand();
+	
 	
 	public SendMessage redirectCommand(Command command) {
 		SendMessage message = new SendMessage() 
@@ -27,7 +32,13 @@ public class CommandRouter {
 			// handle the coin command
 			message = coinCommand.coinCommandAdapter(command);
 			break;
-
+		case "/start":
+			// handle the start command
+			message = startCommand.startCommandAdapter(command);
+			break;
+		case "/test":
+			message = testCommand.testCommandAdapter(command);
+			break;
 		default:
 			break;
 		}

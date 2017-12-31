@@ -233,9 +233,17 @@ public class CryptoManagerBot extends AbilityBot {
 				.privacy(PUBLIC)
 				.input(0)
 				.action(ctx -> {
-					SendMessage message = callbackQueryCommand.createMenuForCommand("Which chart you wish to create?", "/chart", ctx.chatId(), 1);
-	                
-	                silent.execute(message);
+					// register this Command
+					Command command = new Command();
+					command.setChatId(ctx.chatId());
+					command.setUserName(ctx.user().username());
+					command.setCommand(ctx.update().getMessage().getText());
+					try {
+						commandService.saveCommand(command);
+					} catch (Exception e) {
+						LOG.fatal("Error running /coin: {}", e);
+					}
+					// ok done, the scheduled task will handle the command
 				})
 				.build();
 	}

@@ -22,7 +22,9 @@ import org.telegram.telegrambots.api.methods.send.SendMessage;
 import org.telegram.telegrambots.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.api.objects.Message;
 import org.telegram.telegrambots.api.objects.Update;
+import org.telegram.telegrambots.exceptions.TelegramApiException;
 
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -88,7 +90,14 @@ public class CryptoManagerBot extends AbilityBot {
 					EditMessageText editMessageText = callbackQueryRouter.callbackDataForwarder(callbackQuery);
 					
 					// send the message
-					this.execute(editMessageText);
+					try {
+						this.execute(editMessageText);
+					} catch (TelegramApiException e) {
+						String errorMessage = String.format("%s: Error sending message, '%s'. You clicked multiple times didn't you?", new Date(), e.getMessage());
+						editMessageText.setText(errorMessage);
+						this.execute(editMessageText);
+					}
+					
 					
 					// update this callback query
 					callbackQuery.setHandled(1);
@@ -96,6 +105,7 @@ public class CryptoManagerBot extends AbilityBot {
 				}
 			} catch (Exception e) {
 				LOG.fatal("Error handling unhandled callback queries: '{}'", e);
+				
 			}
 			
 		}, 0, 1000L, TimeUnit.MILLISECONDS);
@@ -238,11 +248,25 @@ public class CryptoManagerBot extends AbilityBot {
 	public Ability portfolioCommand() {
 		return Ability.builder()
 				.name("portfolio")
-				.info("get the value of the portfolio(s) this bot has access to.")
+				.info("get the total value for the portfolio.")
 				.locality(ALL)
 				.privacy(PUBLIC)
 				.input(0)
-				.action(ctx -> silent.send("TODO: Handle portfolio command", ctx.chatId()))
+				.action(ctx -> 
+					{
+						// register this Command
+						Command command = new Command();
+						command.setChatId(ctx.chatId());
+						command.setUserName(ctx.user().username());
+						command.setCommand(ctx.update().getMessage().getText());
+						try {
+							commandService.saveCommand(command);
+						} catch (Exception e) {
+							LOG.fatal("Error running /portfolio: {}", e);
+						}
+						// ok done, the scheduled task will handle the command
+					}
+				)
 				.build();
 	}
 	

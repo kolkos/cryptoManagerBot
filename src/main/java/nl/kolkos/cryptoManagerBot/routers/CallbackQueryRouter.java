@@ -55,6 +55,9 @@ public class CallbackQueryRouter {
 		case "getIntervals":
 			editMessageText = intervalCommand.generatePeriodMenu(callbackQuery, callbackDataMap);
 			break;
+		case "getPortfolioValue":
+			editMessageText = portfolioCommand.generatePortfolioValueMessage(callbackQuery, callbackDataMap);
+			break;
 		default:
 			break;
 		}

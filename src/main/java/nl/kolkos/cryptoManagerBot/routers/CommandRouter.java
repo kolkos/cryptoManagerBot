@@ -6,6 +6,7 @@ import org.telegram.telegrambots.api.methods.send.SendMessage;
 
 import nl.kolkos.cryptoManagerBot.commands.ChartCommand;
 import nl.kolkos.cryptoManagerBot.commands.CoinCommand;
+import nl.kolkos.cryptoManagerBot.commands.PortfolioCommand;
 import nl.kolkos.cryptoManagerBot.commands.StartCommand;
 import nl.kolkos.cryptoManagerBot.commands.TestCommand;
 import nl.kolkos.cryptoManagerBot.objects.Command;
@@ -17,6 +18,7 @@ public class CommandRouter {
 	private StartCommand startCommand = new StartCommand();
 	private TestCommand testCommand = new TestCommand();
 	private ChartCommand chartCommand = new ChartCommand();
+	private PortfolioCommand portfolioCommand = new PortfolioCommand();
 	
 	
 	public SendMessage redirectCommand(Command command) {
@@ -43,7 +45,10 @@ public class CommandRouter {
 			break;
 		case "/chart":
 			message = chartCommand.chartCommandAdapter(command);
-			break;	
+			break;
+		case "/portfolio":
+			message = portfolioCommand.generatePortfolioMenu(command);
+			break;
 		default:
 			break;
 		}

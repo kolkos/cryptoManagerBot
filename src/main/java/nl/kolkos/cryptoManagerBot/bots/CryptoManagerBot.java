@@ -270,6 +270,31 @@ public class CryptoManagerBot extends AbilityBot {
 				.build();
 	}
 	
+	public Ability walletCommand() {
+		return Ability.builder()
+				.name("wallet")
+				.info("get the total value for one of the wallets.")
+				.locality(ALL)
+				.privacy(PUBLIC)
+				.input(0)
+				.action(ctx -> 
+					{
+						// register this Command
+						Command command = new Command();
+						command.setChatId(ctx.chatId());
+						command.setUserName(ctx.user().username());
+						command.setCommand(ctx.update().getMessage().getText());
+						try {
+							commandService.saveCommand(command);
+						} catch (Exception e) {
+							LOG.fatal("Error running /portfolio: {}", e);
+						}
+						// ok done, the scheduled task will handle the command
+					}
+				)
+				.build();
+	}
+	
 	public Ability chartCommand() {
 		return Ability.builder()
 				.name("chart")

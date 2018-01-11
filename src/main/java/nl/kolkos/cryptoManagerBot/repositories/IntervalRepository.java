@@ -67,6 +67,10 @@ public class IntervalRepository {
 		intervals.add(new Interval("4w","1d","1 day"));
 		intervals.add(new Interval("4w","1w","1 week"));
 		
+		intervals.add(new Interval("8w","1d","1 day"));
+		intervals.add(new Interval("8w","1w","1 week"));
+		intervals.add(new Interval("8w","4w","4 weeks"));
+		
 		intervals.add(new Interval("1y","1w","1 week"));
 		intervals.add(new Interval("1y","4w","4 weeks"));
 		

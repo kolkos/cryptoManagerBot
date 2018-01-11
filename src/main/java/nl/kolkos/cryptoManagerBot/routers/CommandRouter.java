@@ -9,6 +9,7 @@ import nl.kolkos.cryptoManagerBot.commands.CoinCommand;
 import nl.kolkos.cryptoManagerBot.commands.PortfolioCommand;
 import nl.kolkos.cryptoManagerBot.commands.StartCommand;
 import nl.kolkos.cryptoManagerBot.commands.TestCommand;
+import nl.kolkos.cryptoManagerBot.commands.WalletCommand;
 import nl.kolkos.cryptoManagerBot.objects.Command;
 
 public class CommandRouter {
@@ -19,7 +20,7 @@ public class CommandRouter {
 	private TestCommand testCommand = new TestCommand();
 	private ChartCommand chartCommand = new ChartCommand();
 	private PortfolioCommand portfolioCommand = new PortfolioCommand();
-	
+	private WalletCommand walletCommand = new WalletCommand();
 	
 	public SendMessage redirectCommand(Command command) {
 		SendMessage message = new SendMessage() 
@@ -49,6 +50,9 @@ public class CommandRouter {
 		case "/portfolio":
 			message = portfolioCommand.generatePortfolioMenu(command);
 			break;
+		case "/wallet":
+			message = walletCommand.generateWalletMenu(command);
+			break;	
 		default:
 			break;
 		}
